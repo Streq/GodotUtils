@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/rope_joint_2d/rope_joint_2d.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://RigidBody2D.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[node name="Main" type="Node2D"]
+
+[node name="RopeJoint2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
+body_a = NodePath("../StaticBody2D")
+body_b = NodePath("../RigidBody2D")
+body_b_position = Vector2( -32, -32 )
+length = 250.0
+k = 1000.0
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 258.302, 297.439 )
+input_pickable = true
+mass = 10.94
+gravity_scale = 5.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 512.787, 297.439 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.52588e-05, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+modulate = Color( 1, 0.6, 0.6, 1 )
+texture = ExtResource( 2 )
