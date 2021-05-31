@@ -10,13 +10,15 @@ config_version=4
 
 [application]
 
-config/name="RopeJoint2D"
-run/main_scene="res://Test1.tscn"
+config/name="Dialog Box"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
-[editor_plugins]
+[display]
 
-enabled=PoolStringArray( "res://addons/rope_joint_2d/plugin.cfg" )
+window/size/width=320
+window/size/height=240
+window/size/resizable=false
 
 [physics]
 
