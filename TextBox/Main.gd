@@ -9,7 +9,7 @@ func _ready():
 	t.add_text("no es muy común que nos regalen caramelos hermano pero es así")
 	t.add_text("qué querés que te diga")
 	t.add_text("la vida empieza y sigue. Pero eso no significa que tengas que olvidar todo lo que viviste. O que sentirse culpable siempre está mal.")
-	t.add_text("Yo soy de quienes piensa que el mejor jugador de póker es el que no rompe las pelotas.")
+	t.add_text("Yo soy de quienes piensan que el mejor jugador de póker es el que no rompe las pelotas.")
 
 	t.add_text(
 """add some text of arbitrary length.
